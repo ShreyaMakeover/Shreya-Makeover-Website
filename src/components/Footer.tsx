@@ -1,4 +1,4 @@
-import { ADDRESS, HOURS, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_EMBED_URL, MAPS_LINK, PHONE_DISPLAY, PHONE_TEL, WA_HREF } from '../data/content'
+import { ADDRESS, EMAIL, HOURS, MAPS_EMBED_URL, MAPS_LINK, PHONE_DISPLAY, PHONE_TEL, WA_HREF } from '../data/content'
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="text-[#cdbab8]"><span aria-hidden="true">📍 </span>{ADDRESS}</div>
             <a href={`tel:${PHONE_TEL}`} className="text-[#f0e8df] no-underline"><span aria-hidden="true">📞 </span>{PHONE_DISPLAY} — tap to call</a>
             <a href={WA_HREF} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline"><span aria-hidden="true">💬 </span>WhatsApp us</a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline"><span aria-hidden="true">📸 </span>@{INSTAGRAM_HANDLE}</a>
+            <a href={`mailto:${EMAIL}`} className="text-[#f0e8df] no-underline"><span aria-hidden="true">✉️ </span>{EMAIL}</a>
             <div className="text-[#cdbab8]"><span aria-hidden="true">🕑 </span>{HOURS}</div>
           </address>
         </div>

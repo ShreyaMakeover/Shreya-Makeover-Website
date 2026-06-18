@@ -7,6 +7,7 @@ export const WA_HREF = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_
 
 export const PHONE_DISPLAY = '+91 88406 48059'
 export const PHONE_TEL = '+918840648059'
+export const EMAIL = 'kesharwanisa254@gmail.com'
 export const ADDRESS = 'Near COD Gate, Chaka Block, Dhandi, Prayagraj, Uttar Pradesh'
 export const HOURS = 'Mon–Sun · 10:00 AM – 8:00 PM'
 export const INSTAGRAM_HANDLE = 'shreya_makeovers_2026'
