@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreya-makeover.vercel.app/sitemap.xml

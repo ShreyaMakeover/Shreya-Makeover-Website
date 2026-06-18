@@ -25,10 +25,10 @@ src/
   types.ts              shared TypeScript interfaces
   data/content.ts       services, packages, trust, gallery, testimonials, WhatsApp number
   hooks/useScrolled.ts  header-elevation + reduced-motion helpers
-  booking/              BookingContext (open modal anywhere) + BookingModal (multi-step)
+  booking/              BookingContext — useBooking().open(service?) redirects to WhatsApp
   components/           Header, MobileMenu, Hero, TrustBand, Services, Bridal, Gallery,
                         About, Testimonials, Membership, Footer, BottomBar,
-                        Reveal (scroll-in), CountUp, SectionHead, WaDot
+                        Reveal (scroll-in), CountUp, SectionHead, WaDot, WaIcon
 ```
 
 ## Editing content

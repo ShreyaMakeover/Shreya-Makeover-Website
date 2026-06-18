@@ -58,5 +58,3 @@ export const TESTIMONIALS: Testimonial[] = [
   { stars: '★★★★★', quote: 'Finally a salon that runs on time and sanitises everything in front of you. My go-to for colour now.', name: 'Neha S.', initial: 'N', tag: 'Hair colour' },
   { stars: '★★★★★', quote: 'The stylists actually listen. Subtle, elegant makeup for my engagement — exactly what I asked for.', name: 'Priya M.', initial: 'P', tag: 'Party makeup' },
 ]
-
-export const TIME_SLOTS: string[] = ['10:00 AM', '11:30 AM', '1:00 PM', '3:00 PM', '5:00 PM', '6:30 PM']

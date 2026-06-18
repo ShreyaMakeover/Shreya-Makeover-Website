@@ -7,13 +7,13 @@ export default function Footer() {
         <div>
           <div className="mb-1 font-serif text-[26px] text-white md:text-[30px]">Shreya Makeover</div>
           <p className="mb-[18px] text-[13px] leading-[1.6] text-[#b6a3a1]">your quiet place to glow.</p>
-          <div className="flex flex-col gap-[10px] text-[13.5px]">
-            <div className="text-[#cdbab8]">📍 {ADDRESS}</div>
-            <a href={`tel:${PHONE_TEL}`} className="text-[#f0e8df] no-underline">📞 {PHONE_DISPLAY} — tap to call</a>
-            <a href={WA_HREF} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline">💬 WhatsApp us</a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline">📸 @{INSTAGRAM_HANDLE}</a>
-            <div className="text-[#cdbab8]">🕑 {HOURS}</div>
-          </div>
+          <address className="flex flex-col gap-[10px] text-[13.5px] not-italic">
+            <div className="text-[#cdbab8]"><span aria-hidden="true">📍 </span>{ADDRESS}</div>
+            <a href={`tel:${PHONE_TEL}`} className="text-[#f0e8df] no-underline"><span aria-hidden="true">📞 </span>{PHONE_DISPLAY} — tap to call</a>
+            <a href={WA_HREF} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline"><span aria-hidden="true">💬 </span>WhatsApp us</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline"><span aria-hidden="true">📸 </span>@{INSTAGRAM_HANDLE}</a>
+            <div className="text-[#cdbab8]"><span aria-hidden="true">🕑 </span>{HOURS}</div>
+          </address>
         </div>
 
         <a
