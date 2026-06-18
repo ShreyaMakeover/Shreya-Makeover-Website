@@ -3,3 +3,7 @@ dist
 *.tsbuildinfo
 *.local
 .DS_Store
+
+# source design assets (optimized copies live in public/)
+/Shreya Logo.png
+/Shreya Makeover Hero section.png

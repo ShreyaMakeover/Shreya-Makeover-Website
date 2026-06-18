@@ -8,9 +8,12 @@ export default function Hero() {
   return (
     <section className="relative md:grid md:grid-cols-[1.05fr_1fr] md:min-h-[calc(100dvh-78px)]">
       <div className="hero-media relative flex h-[calc(100dvh-66px)] min-h-[480px] items-start justify-center overflow-hidden sm:min-h-[560px] md:order-2 md:h-auto md:min-h-0 md:items-center">
-        <span className="pointer-events-none absolute left-0 right-0 top-[78px] text-center text-[11px] tracking-[0.08em] text-[rgba(216,185,172,0.5)] md:static md:text-[13px]">
-          [ hero photo · salon interior, natural light ]
-        </span>
+        <img
+          src="/hero.jpg"
+          alt="Shreya Makeover salon — calm, spotless studio"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="hero-scrim absolute inset-0 md:hidden" />
       </div>
 
