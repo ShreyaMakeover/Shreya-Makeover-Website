@@ -1,0 +1,55 @@
+import { useBooking } from '../booking/BookingContext'
+import { ADDRESS, HOURS, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_EMBED_URL, MAPS_LINK, PHONE_DISPLAY, PHONE_TEL, WA_HREF } from '../data/content'
+
+export default function Footer() {
+  const { open } = useBooking()
+
+  return (
+    <footer id="contact" className="scroll-mt-[72px] bg-footer pb-24 pt-9 text-[#d7c6c4] md:px-0 md:pb-[30px] md:pt-14">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-[22px] px-5 md:grid md:grid-cols-3 md:gap-10 md:px-14">
+        <div>
+          <div className="mb-1 font-serif text-[26px] text-white md:text-[30px]">Shreya Makeover</div>
+          <p className="mb-[18px] text-[13px] leading-[1.6] text-[#b6a3a1]">your quiet place to glow.</p>
+          <div className="flex flex-col gap-[10px] text-[13.5px]">
+            <div className="text-[#cdbab8]">📍 {ADDRESS}</div>
+            <a href={`tel:${PHONE_TEL}`} className="text-[#f0e8df] no-underline">📞 {PHONE_DISPLAY} — tap to call</a>
+            <a href={WA_HREF} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline">💬 WhatsApp us</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener" className="text-[#f0e8df] no-underline">📸 @{INSTAGRAM_HANDLE}</a>
+            <div className="text-[#cdbab8]">🕑 {HOURS}</div>
+          </div>
+        </div>
+
+        <a
+          href={MAPS_LINK}
+          target="_blank"
+          rel="noopener"
+          aria-label="Open Shreya Makeover location in Google Maps"
+          className="block h-[150px] overflow-hidden rounded-[14px] border border-[rgba(215,169,140,0.18)] md:h-[200px]"
+        >
+          <iframe
+            title="Shreya Makeover — Prayagraj location"
+            src={MAPS_EMBED_URL}
+            className="pointer-events-none h-full w-full border-0"
+            style={{ filter: 'grayscale(0.3) contrast(1.05) brightness(0.92)' }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </a>
+
+        <div>
+          <p className="eyebrow mb-3 text-[12px] tracking-[0.14em]">Send an enquiry</p>
+          <form className="flex flex-col gap-[9px]" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" name="name" placeholder="Your name" aria-label="Your name" className="field rounded-[10px]" />
+            <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number" inputMode="numeric" className="field rounded-[10px]" />
+            <button type="button" className="btn btn-gold btn-block rounded-[10px]" onClick={() => open()}>
+              Request a callback
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="container mx-auto mt-[22px] max-w-[1200px] px-5 text-center text-[11px] text-[#8f7a78] md:mt-9 md:border-t md:border-[rgba(255,255,255,0.12)] md:px-14 md:pt-[22px]">
+        © 2026 Shreya Makeover · Made with care
+      </div>
+    </footer>
+  )
+}
