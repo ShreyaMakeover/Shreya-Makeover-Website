@@ -1,9 +1,6 @@
-import { useBooking } from '../booking/BookingContext'
 import { ADDRESS, HOURS, INSTAGRAM_HANDLE, INSTAGRAM_URL, MAPS_EMBED_URL, MAPS_LINK, PHONE_DISPLAY, PHONE_TEL, WA_HREF } from '../data/content'
 
 export default function Footer() {
-  const { open } = useBooking()
-
   return (
     <footer id="contact" className="scroll-mt-[72px] bg-footer pb-24 pt-9 text-[#d7c6c4] md:px-0 md:pb-[30px] md:pt-14">
       <div className="mx-auto flex max-w-[1200px] flex-col gap-[22px] px-5 md:grid md:grid-cols-3 md:gap-10 md:px-14">
@@ -36,15 +33,14 @@ export default function Footer() {
           />
         </a>
 
-        <div>
-          <p className="eyebrow mb-3 text-[12px] tracking-[0.14em]">Send an enquiry</p>
-          <form className="flex flex-col gap-[9px]" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" name="name" placeholder="Your name" aria-label="Your name" className="field rounded-[10px]" />
-            <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number" inputMode="numeric" className="field rounded-[10px]" />
-            <button type="button" className="btn btn-gold btn-block rounded-[10px]" onClick={() => open()}>
-              Request a callback
-            </button>
-          </form>
+        <div className="flex flex-col items-start justify-center">
+          <p className="eyebrow mb-3 text-[12px] tracking-[0.14em]">Get in touch</p>
+          <p className="mb-4 text-[13.5px] leading-[1.6] text-[#b6a3a1]">
+            Message us on WhatsApp to book or ask anything — we usually reply within minutes.
+          </p>
+          <a href={WA_HREF} target="_blank" rel="noopener" className="btn btn-gold rounded-[10px]">
+            Chat on WhatsApp
+          </a>
         </div>
       </div>
       <div className="container mx-auto mt-[22px] max-w-[1200px] px-5 text-center text-[11px] text-[#8f7a78] md:mt-9 md:border-t md:border-[rgba(255,255,255,0.12)] md:px-14 md:pt-[22px]">
