@@ -1,8 +1,12 @@
-import { GALLERY, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../data/content'
+import { useState } from 'react'
+import { GALLERY, INSTAGRAM_HANDLE, INSTAGRAM_URL, TRANSFORMATIONS } from '../data/content'
 import Reveal from './Reveal'
 import SectionHead from './SectionHead'
+import TransformationsModal from './TransformationsModal'
 
 export default function Gallery() {
+  const [showTransforms, setShowTransforms] = useState(false)
+
   return (
     <section id="gallery" className="section-shell scroll-mt-[72px]">
       <div className="mx-auto max-w-[1200px] px-5 md:px-14">
@@ -29,6 +33,13 @@ export default function Gallery() {
             </Reveal>
           ))}
         </div>
+        {TRANSFORMATIONS.length > 0 && (
+          <Reveal className="mt-7 flex justify-center md:mt-9">
+            <button className="btn btn-gold" onClick={() => setShowTransforms(true)}>
+              View transformations
+            </button>
+          </Reveal>
+        )}
         <a
           href={INSTAGRAM_URL}
           target="_blank"
@@ -38,6 +49,8 @@ export default function Gallery() {
           Follow @{INSTAGRAM_HANDLE} on Instagram →
         </a>
       </div>
+
+      <TransformationsModal open={showTransforms} onClose={() => setShowTransforms(false)} />
     </section>
   )
 }

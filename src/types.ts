@@ -25,6 +25,14 @@ export interface GalleryItem {
   img?: string
 }
 
+export interface Transformation {
+  label: string
+  /** image URL or /transformations/<slug>-before.jpg */
+  before: string
+  /** image URL or /transformations/<slug>-after.jpg */
+  after: string
+}
+
 export interface Testimonial {
   stars: string
   quote: string
