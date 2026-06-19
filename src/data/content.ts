@@ -42,13 +42,27 @@ export const TRUST: Trust[] = [
   { big: '✓', label: 'Pay at the salon · book in 30 seconds' },
 ]
 
+const galleryImg = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=75`
+
 export const GALLERY: GalleryItem[] = [
-  { label: 'Hair styling', h: 150, tall: true, img: '/transformations/hair-2.jpg' },
-  { label: 'Hair colour', h: 110, img: '/transformations/hair-3.jpg' },
-  { label: 'Sleek finish', h: 110, img: '/transformations/hair-1.jpg' },
-  { label: 'Hair makeover', h: 150, tall: true, img: '/transformations/hair-7.jpg' },
-  { label: 'Glam hair', h: 120, img: '/transformations/hair-4.jpg' },
-  { label: 'Styled & set', h: 120, img: '/transformations/hair-5.jpg' },
+  { label: 'Before / after · hair colour', h: 150, tall: true, img: galleryImg('1560066984-138dadb4c035') },
+  { label: 'Bridal look', h: 110, img: galleryImg('1684868268327-7e5590bcfbd6') },
+  { label: 'Glow facial', h: 110, img: galleryImg('1570172619644-dfd03ed5d881') },
+  { label: 'Hair styling', h: 150, tall: true, img: galleryImg('1493775379751-a6c3940f3cbc') },
+  { label: 'Nail art', h: 120, img: galleryImg('1632345031435-8727f6897d53') },
+  { label: 'Happy client', h: 120, img: galleryImg('1595475884562-073c30d45670') },
+]
+
+// Hair result photos shown in the "Hair" tab of the transformations lightbox.
+export const HAIR_PHOTOS: string[] = [
+  '/transformations/hair-1.jpg',
+  '/transformations/hair-2.jpg',
+  '/transformations/hair-3.jpg',
+  '/transformations/hair-4.jpg',
+  '/transformations/hair-5.jpg',
+  '/transformations/hair-6.jpg',
+  '/transformations/hair-7.jpg',
 ]
 
 // Before/after pairs shown in the gallery "View transformations" lightbox.
