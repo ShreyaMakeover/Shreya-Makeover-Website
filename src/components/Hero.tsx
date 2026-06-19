@@ -11,7 +11,7 @@ export default function Hero() {
         <img
           src="/hero.jpg"
           alt="Shreya Makeover salon — calm, spotless studio"
-          fetchPriority="high"
+          {...({ fetchpriority: 'high' } as Record<string, string>)}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="hero-scrim absolute inset-0 md:hidden" />
