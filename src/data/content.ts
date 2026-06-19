@@ -42,28 +42,24 @@ export const TRUST: Trust[] = [
   { big: '✓', label: 'Pay at the salon · book in 30 seconds' },
 ]
 
-const galleryImg = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=75`
-
 export const GALLERY: GalleryItem[] = [
-  { label: 'Before / after · hair colour', h: 150, tall: true, img: galleryImg('1560066984-138dadb4c035') },
-  { label: 'Bridal look', h: 110, img: galleryImg('1684868268327-7e5590bcfbd6') },
-  { label: 'Glow facial', h: 110, img: galleryImg('1570172619644-dfd03ed5d881') },
-  { label: 'Hair styling', h: 150, tall: true, img: galleryImg('1493775379751-a6c3940f3cbc') },
-  { label: 'Nail art', h: 120, img: galleryImg('1632345031435-8727f6897d53') },
-  { label: 'Happy client', h: 120, img: galleryImg('1595475884562-073c30d45670') },
+  { label: 'Hair styling', h: 150, tall: true, img: '/transformations/hair-2.jpg' },
+  { label: 'Hair colour', h: 110, img: '/transformations/hair-3.jpg' },
+  { label: 'Sleek finish', h: 110, img: '/transformations/hair-1.jpg' },
+  { label: 'Hair makeover', h: 150, tall: true, img: '/transformations/hair-7.jpg' },
+  { label: 'Glam hair', h: 120, img: '/transformations/hair-4.jpg' },
+  { label: 'Styled & set', h: 120, img: '/transformations/hair-5.jpg' },
 ]
 
 // Before/after pairs shown in the gallery "View transformations" lightbox.
-// TEMP placeholder pairs — replace each `before`/`after` with optimized local
-// photos in public/transformations/ (e.g. '/transformations/hair-before.jpg').
-const tImg = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=78`
-
 export const TRANSFORMATIONS: Transformation[] = [
-  { label: 'Hair colour', before: tImg('1595475884562-073c30d45670'), after: tImg('1560066984-138dadb4c035') },
-  { label: 'Bridal makeover', before: tImg('1570172619644-dfd03ed5d881'), after: tImg('1684868268327-7e5590bcfbd6') },
-  { label: 'Hair styling', before: tImg('1632345031435-8727f6897d53'), after: tImg('1493775379751-a6c3940f3cbc') },
+  { label: 'Bridal makeover 1', before: '/transformations/bridal-1-before.jpg', after: '/transformations/bridal-1-after.jpg' },
+  { label: 'Bridal makeover 2', before: '/transformations/bridal-2-before.jpg', after: '/transformations/bridal-2-after.jpg' },
+  { label: 'Bridal makeover 3', before: '/transformations/bridal-3-before.jpg', after: '/transformations/bridal-3-after.jpg' },
+  { label: 'Bridal makeover 4', before: '/transformations/bridal-4-before.jpg', after: '/transformations/bridal-4-after.jpg' },
+  { label: 'Bridal makeover 5', before: '/transformations/bridal-5-before.jpg', after: '/transformations/bridal-5-after.jpg' },
+  { label: 'Bridal makeover 6', before: '/transformations/bridal-6-before.jpg', after: '/transformations/bridal-6-after.jpg' },
+  { label: 'Bridal makeover 7', before: '/transformations/bridal-7-before.jpg', after: '/transformations/bridal-7-after.jpg' },
 ]
 
 export const TESTIMONIALS: Testimonial[] = [

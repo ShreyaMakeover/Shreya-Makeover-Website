@@ -14,7 +14,7 @@ export default function BeforeAfterSlider({ before, after, label }: Props) {
   const [pos, setPos] = useState(50)
 
   return (
-    <div className="relative aspect-[4/3] w-full select-none overflow-hidden rounded-[14px] bg-surface">
+    <div className="relative aspect-[3/4] w-full select-none overflow-hidden rounded-[14px] bg-surface">
       {/* after = base layer */}
       <img
         src={after}

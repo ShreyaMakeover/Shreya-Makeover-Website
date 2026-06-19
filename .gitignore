@@ -7,3 +7,6 @@ dist
 # source design assets (optimized copies live in public/)
 /Shreya Logo.png
 /Shreya Makeover Hero section.png
+
+# original full-res source photos (optimized copies live in public/transformations/)
+/_source-images/
